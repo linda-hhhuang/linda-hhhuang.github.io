@@ -1,33 +1,140 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>linda主页~</title>
-    <link href="https://fonts.font.im/css?family=Open+Sans" rel="stylesheet" type="text/css"> 
-    <link href="https://fonts.googleapis.com/css2?family=Prompt&family=Sriracha&display=swap" rel="stylesheet">
-    <link href="styles/style.css" rel="stylesheet">
-  </head>
-  <body>
-      <h1>hello everyone~</h1>
-      <img src="images/xiaoxin.jpg" alt="我的测试页面">
-    <p>This is a paragraph</p>
-    <ol>
-        <li>蜡笔小新</li>
-            <ol>
-                <li>1个</li>
-                <li>3个</li>
-                <li>5个</li>
-                <p>This is a paragraph</p>
-            </ol>
+    <head>
+        <link rel="shortcut icon" href="images/icon.ico" type="image/x-icon">
+        <meta charset="utf-8" name="author" content="linda">
+        <title>表单模拟</title>
+        <style>
+            table {
+                border-collapse: collapse;
+                border: 2px solid black;
+                letter-spacing: 1px;
+                font-size: 0.8rem;
+                }
+
+            input {
+              height: 25px;
+              }
+              td, th {
+                border: 2px solid black;
+                padding: 10px 20px;
+                }
+
+        </style>
+    </head>
+
+    <body>
+        <h1>学生健康状况申报</h1>
+        <h2>Student Health Declaration</h2>
+
+        <form>
+            <table>
+                <h3>
+                    个人基本信息<br>
+                    Basic Personal Information
+                </h3>
+                <tr>
+                    <th><label for="name">* 填报人姓名<br>
+                        Name</label></th>
+                    <td><input type="text" id="name" name="name" required></td>
+
+                    <th><label for="student_number">* 填报人学号<br>
+                        Student Number</label></th>
+                    <td><input type="text" id="student_number" name="student_number" required></td>
+                </tr>
+                <tr>
+                    <th><label for="contact">* 填报人联系方式<br>
+                        Contact</label></th>
+                    <td><input type="tel" id="contact" name="contact" required pattern="[0-9]{11}"></td>
+
+                    <th><label for="department">* 所在院系<br>
+                        Department /School</label></th>
+                    <td><input type="text" id="department" name="department" required></td>
+                </tr>
+
+                <tr>
+                    <th><label for="class">* 所在班级<br>
+                        Class</label></th>
+                    <td><input type="text" id="class" name="class" required></td>
+                    <td colspan="2"></td>
+                </tr>
+
+                <tr>
+                    <th><label for="place_of_origin">* 籍贯<br>
+                        Place of Origin</label></th>
+                    <td colspan="3">
+                        <input type="radio"  required id="place_of_origin_1" name="place_of_origin" value="mainland"/>
+                        <label for="place_of_origin_1">
+                            内地(The Mainland of China)
+                        </label>
+                        <input type="radio" required id="place_of_origin_2" name="place_of_origin" value="HKMT"/>
+                        <label for="place_of_origin_2">
+                            港澳台籍(Hong Kong, Macao or Taiwan )
+                        </label>
+                        <input type="radio" required id="place_of_origin_3" name="place_of_origin" value="OCR"/>
+                        <label for="place_of_origin_3">
+                            外籍(Other Countries or Regions)
+                        </label>
+                    </td>
+                </tr>
+                    <td colspan="4">
+                        <input type="text" id="province" name="province" value="" list="provincelist">
+                        <span>省
+                            Province</span>
+                            <input type="text" id="city" name="city" value="">
+                        <span>市
+                            City
+                            <input type="text" id="district" name="district" value=" ">
+                        <span>区（县、镇）
+                            District (County, Town)
+                             </span>
+                    </td>
+
+                    <tr>
+                        <th><label for="level">* 培养层次<br>
+                                    Education Level</label></th>
+                        <td><input required type="text" id="level" name="level" list="level"></td>
+                            <datalist id="level">
+                                <option>本科生</option>
+                                <option>研究生</option>
+                                <option>博士生</option>
+                                <option>头发生</option>
+                            </datalist>
+                        <th><label for="full_time">* 是否全日制<br>
+                            Full-time Course or Not</label></th>
+                        <td><input type="text" id="full_time" name="full_time" required></td>
+                    </tr>
+                    <tr>
+                        <th><label for="emergency_contact">紧急联系人<br>
+                            Emergency Contact</label></th>
+                        <td><input type="text" id="emergency_contact" name="emergency_contact"></td>
+    
+                        <th><label for="emergency_contact_tel">  紧急联系人手机号<br>
+                            Emergency Contact Phone Number</label></th>
+                        <td><input type="tel" id="emergency_contact_tel" pattern="[0-9]{11} name="emergency_contact_tel"></td>
+                    </tr>
+                    <tr>
+                        <th><label for="level">曾到访省份</label></th>
+                        <td colspan="3">
+                            <input type="checkbox" id="visited_1" name="visited" value="">
+                            <label for="visited_1">广东省</label>
+                            <input type="checkbox" id="visited_2" name="visited" value="">
+                            <label for="visited_2">湖北省</label>
+                            <input type="checkbox" id="visited_3" name="visited" value="">
+                            <label for="visited_3">浙江省</label>
+                            <input type="checkbox" id="visited_4" name="visited" value="">
+                            <label for="visited_4">河南省</label>
+                            <input type="checkbox" id="visited_5" name="visited" value="">
+                            <label for="visited_5">北京市</label>
+                        </td>
+                    </tr>
+
+            </table>
+            
+            <button>Submit</button>
+        </form>
+        <p><a href="index_v1.html">原本网站</a></p>
         
-        <li>美伢</li>
-        <li >广志</li>
-        <li>小白</li>
-      </ol>
-    <a href="https://bilibili.com">
-        come on!</a>
-        <p> </p>
-        <button>切换用户</button>
-        <script src="scripts/main.js" defer></script>
-</body>
-</html> 
+
+    </body>
+</html>
