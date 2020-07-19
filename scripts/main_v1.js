@@ -2,10 +2,10 @@ let myImage = document.querySelector('img');
 
 myImage.onclick = function() {
     let mySrc = myImage.getAttribute('src');
-    if(mySrc === 'images/xiaoxin.jpg') {
-      myImage.setAttribute('src', 'images/xiaoxin2.jpg');
+    if (mySrc === 'images/xiaoxin.jpg') {
+        myImage.setAttribute('src', 'images/xiaoxin2.jpg');
     } else {
-      myImage.setAttribute('src', 'images/xiaoxin.jpg');
+        myImage.setAttribute('src', 'images/xiaoxin.jpg');
     }
 }
 
@@ -14,19 +14,19 @@ let myHeading = document.querySelector('h1');
 
 function setUserName() {
     let myName = prompt('请输入你的名字。');
-    if(!myName || myName === null) {
-      setUserName();
+    if (!myName || myName === null) {
+        setUserName();
     } else {
-      localStorage.setItem('name', myName);
-      myHeading.innerHTML = myName+'是最~棒的';
+        localStorage.setItem('name', myName);
+        myHeading.innerHTML = '来啦' + myName + ', 坐!';
     }
-  }
-if(!localStorage.getItem('name')) {
+}
+if (!localStorage.getItem('name')) {
     setUserName();
-  } else {
+} else {
     let storedName = localStorage.getItem('name');
-    myHeading.textContent =  storedName +' 是最~棒的';
+    myHeading.textContent = '来啦' + storedName + ', 坐!';
 }
 myButton.onclick = function() {
     setUserName();
- }
+}

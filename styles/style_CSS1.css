@@ -1,0 +1,142 @@
+/* General setup */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-family: serif;
+    font-size: 10px;
+}
+
+h2 {
+    font-family: "slab serif";
+    font-size: 3rem;
+    letter-spacing: 2px;
+}
+
+p,
+ul,
+ol {
+    font-size: 2rem;
+}
+
+header {
+    text-align: center;
+    font-size: 3rem;
+}
+
+body {
+    margin: 0 auto;
+    min-width: 1000px;
+    max-width: 1400px;
+    line-height: 1.4;
+    letter-spacing: 0.3px;
+    word-spacing: 1px;
+}
+
+
+/* Layout */
+
+section {
+    float: left;
+    width: 50%;
+}
+
+aside {
+    float: left;
+    width: 30%;
+}
+
+nav {
+    float: left;
+    width: 20%;
+}
+
+nav li {
+    display: block;
+    border: 2px solid rgb(170, 49, 49);
+    height: 80px;
+    width: 200px;
+    margin-bottom: 20px;
+    background-color: bisque;
+}
+
+nav ul {
+    margin: 0;
+    display: inline;
+}
+
+nav a {
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    line-height: 80px;
+    text-decoration: none;
+}
+
+footer {
+    clear: both;
+}
+
+header,
+section,
+aside,
+nav,
+footer {
+    padding: 20px;
+}
+
+
+/* header and footer */
+
+header,
+footer {
+    border-top: 5px solid #a66;
+    border-bottom: 5px solid #a66;
+}
+
+section h2+p {
+    text-indent: 20px;
+}
+
+a,
+a:link,
+a:visited,
+a:focus,
+a:hover {
+    color: #a66;
+}
+
+a:focus,
+a:hover {
+    text-decoration: none;
+}
+
+a:focus {
+    outline: none;
+}
+
+a:active {
+    color: rgb(255, 0, 0);
+    background-color: rgba(255, 145, 145, 0.699)
+}
+
+section p a {
+    background: url(../images/external-link-52.png) no-repeat 100% 0;
+    background-size: 1em 1em;
+    padding-right: 1.2em;
+}
+
+ol,
+ul {
+    line-height: 1.4;
+    list-style-type: square;
+}
+
+nav {
+    padding: 0;
+}
+
+
+/* WRITE YOUR CODE BELOW HERE */
